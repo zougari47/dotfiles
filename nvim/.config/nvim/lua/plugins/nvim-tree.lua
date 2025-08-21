@@ -2,9 +2,9 @@ return {
   "nvim-tree/nvim-tree.lua",
   opts = {
     view = {
-      side = "right", -- Set file explorer to the right
+      side = "right", -- set file explorer to the right
     },
- actions = {
+    actions = {
       open_file = {
         quit_on_open = true,
       },
