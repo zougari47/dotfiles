@@ -25,6 +25,9 @@ local servers = {
         importModuleSpecifierPreference = "relative",
       },
     },
+    root_dir = function(fname)
+      return require("lspconfig.util").root_pattern("package.json", "tsconfig.json", ".git")(fname)
+    end,
   },
   astro = {
     init_options = {

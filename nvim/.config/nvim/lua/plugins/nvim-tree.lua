@@ -9,5 +9,8 @@ return {
         quit_on_open = true,
       },
     },
+    notify = {
+      threshold = vim.log.levels.ERROR, -- Only show error notifications
+    },
   },
 }
