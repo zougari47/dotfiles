@@ -17,8 +17,22 @@ local servers = {
 
   html = {},
   emmet_ls = {},
-  cssls = {},
-  tailwindcss = {},
+  cssls = {
+    settings = {
+      css = {
+        lint = {
+          unknownAtRules = "ignore",
+        },
+      },
+    },
+  },
+  tailwindcss = {
+    settings = {
+      tailwindCSS = {
+        classFunctions = { "cva", "cn" },
+      },
+    },
+  },
   ts_ls = {
     init_options = {
       preferences = {

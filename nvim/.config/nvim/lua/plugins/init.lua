@@ -14,7 +14,7 @@ return {
   },
 
   -- test new blink
-  { import = "nvchad.blink.lazyspec" },
+  -- { import = "nvchad.blink.lazyspec" },
 
   {
     "saghen/blink.cmp",
@@ -24,5 +24,16 @@ return {
       opts.keymap["<CR>"] = { "fallback" }
       return opts
     end,
+  },
+
+  {
+    "abecodes/tabout.nvim",
+    lazy = false,
+    config = function()
+      require("tabout").setup {} -- Inherit all defaults
+    end,
+    dependencies = { "nvim-treesitter/nvim-treesitter" }, -- Required
+    event = "InsertCharPre",
+    priority = 1000,
   },
 }
