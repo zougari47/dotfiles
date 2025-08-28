@@ -37,6 +37,8 @@ local servers = {
     init_options = {
       preferences = {
         importModuleSpecifierPreference = "relative",
+        includeCompletionsForModuleExports = true,
+        includeCompletionsWithInsertText = true,
       },
     },
     root_dir = function(fname)
