@@ -19,7 +19,19 @@ local servers = {
       },
     },
   },
-  emmet_ls = {},
+  emmet_ls = {
+    filetypes = { "html", "javascriptreact", "typescriptreact", "astro" },
+    init_options = {
+      html = {
+        options = {
+          ["bem.enabled"] = true,
+          ["self_closing_style"] = "xhtml",
+          ["showSuggestionsAsSnippets"] = false, -- Prevents snippets for non-tag words
+          ["showAbbreviationSuggestions"] = false, -- Disables suggestions for arbitrary words
+        },
+      },
+    },
+  },
   html = {},
   tailwindcss = {
     settings = {
