@@ -2,6 +2,38 @@
 require("nvchad.configs.lspconfig").defaults()
 
 local servers = {
+  -- Web / Frontend
+  astro = {
+    init_options = {
+      typescript = {
+        tsdk = "/home/alpha/.nvm/versions/node/v22.17.1/lib/node_modules/typescript/lib",
+      },
+    },
+  },
+  cssls = {
+    settings = {
+      css = {
+        lint = {
+          unknownAtRules = "ignore",
+        },
+      },
+    },
+  },
+  emmet_ls = {},
+  html = {},
+  tailwindcss = {
+    settings = {
+      tailwindCSS = {
+        classFunctions = { "cva", "cn" },
+      },
+    },
+  },
+
+  -- Markup / Docs
+  marksman = {},
+
+  -- Scripting / Languages
+  bashls = {},
   lua_ls = {
     settings = {
       Lua = {
@@ -15,49 +47,19 @@ local servers = {
     },
   },
 
-  html = {},
-  emmet_ls = {},
-  cssls = {
-    settings = {
-      css = {
-        lint = {
-          unknownAtRules = "ignore",
-        },
-      },
-    },
-  },
-  tailwindcss = {
-    settings = {
-      tailwindCSS = {
-        classFunctions = { "cva", "cn" },
-      },
-    },
-  },
-  ts_ls = {
-    init_options = {
-      preferences = {
-        importModuleSpecifierPreference = "relative",
-        includeCompletionsForModuleExports = true,
-        includeCompletionsWithInsertText = true,
-      },
-    },
-    root_dir = function(fname)
-      return require("lspconfig.util").root_pattern("package.json", "tsconfig.json", ".git")(fname)
-    end,
-  },
-  astro = {
-    init_options = {
-      typescript = {
-        tsdk = "/home/alpha/.nvm/versions/node/v22.17.1/lib/node_modules/typescript/lib",
-      },
-    },
-  },
-  marksman = {},
+  -- TypeScript / JavaScript
+  vtsls = {},
 
+  -- Systems / Other
   rust_analyzer = {},
 }
 
+local lspconfig = require "lspconfig"
 for name, opts in pairs(servers) do
-  vim.lsp.enable(name)
-  vim.lsp.config(name, opts)
+  -- vim.lsp.enable(name)
+  -- vim.lsp.config(name, opts)
+  opts = opts or {}
+  lspconfig[name].setup(opts)
 end
+
+require("lspconfig").vtsls.setup {}
