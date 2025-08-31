@@ -36,4 +36,10 @@ return {
     event = "InsertCharPre",
     priority = 1000,
   },
+
+  {
+    "windwp/nvim-ts-autotag",
+    event = "InsertCharPre",
+    opts = {},
+  },
 }

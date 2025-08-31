@@ -3,25 +3,36 @@ return {
   opts = {
     ensure_installed = {
       -- Neovim essentials
-      "vim", "lua", "vimdoc",
+      "vim",
+      "lua",
+      "vimdoc",
 
       -- Web stack
-      "html", "css",
-      "javascript", "typescript", "tsx",
+      "html",
+      "css",
+      "javascript",
+      "typescript",
+      "tsx",
       "astro",
 
       -- Rust
-      "rust", "toml",
+      "rust",
+      "toml",
 
       -- Config / data formats
-      "json", "jsonc",
+      "json",
+      "jsonc",
       "yaml",
 
       -- Docs
-      "markdown", "markdown_inline",
+      "markdown",
+      "markdown_inline",
 
       -- Shell
       "bash",
+
+      -- Database
+      "sql",
     },
   },
 }
