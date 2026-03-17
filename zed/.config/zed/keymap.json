@@ -1,0 +1,65 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-n": "workspace::ToggleRightDock",
+      "space f f": "file_finder::Toggle",
+      "space f w": "pane::DeploySearch"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "ctrl-n": "workspace::ToggleRightDock",
+      "ctrl-n": "workspace::ToggleRightDock",
+
+      "n": "project_panel::NewFile",
+      "d": "project_panel::Delete",
+      "r": "project_panel::Rename"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": ["workspace::SendKeystrokes", "escape"],
+      "ctrl-space": "editor::ShowCompletions",
+      "ctrl-e": "editor::Cancel"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space f w": "pane::DeploySearch",
+      "ctrl-n": "workspace::ToggleRightDock",
+      "space w": "workspace::Save",
+
+      "space o": ["workspace::SendKeystrokes", "o escape"],
+      "space O": ["workspace::SendKeystrokes", "O escape"],
+
+      "space b x": "pane::CloseActiveItem",
+      "space b X": "workspace::CloseInactiveTabsAndPanes",
+
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "alt-j": ["editor::MoveLineDown", "editor::ReformatSelection"],
+      "alt-k": ["editor::MoveLineUp", "editor::ReformatSelection"]
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "enter": "editor::ConfirmCompletion",
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrevious"
+    }
+  }
+]
