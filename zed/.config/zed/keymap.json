@@ -13,7 +13,7 @@
       "ctrl-n": "workspace::ToggleRightDock",
       "ctrl-n": "workspace::ToggleRightDock",
 
-      "n": "project_panel::NewFile",
+      "a": "project_panel::NewFile",
       "d": "project_panel::Delete",
       "r": "project_panel::Rename"
     }
@@ -37,7 +37,9 @@
       "space o": ["workspace::SendKeystrokes", "o escape"],
       "space O": ["workspace::SendKeystrokes", "O escape"],
 
-      "space b x": "pane::CloseActiveItem",
+      "space x": "pane::CloseActiveItem",
+      "space b x": "workspace::CloseAllItemsAndPanes",
+
       "space b X": "workspace::CloseInactiveTabsAndPanes",
 
       "alt-j": "editor::MoveLineDown",
@@ -51,7 +53,9 @@
     "context": "Editor && vim_mode == visual",
     "bindings": {
       "alt-j": ["editor::MoveLineDown", "editor::ReformatSelection"],
-      "alt-k": ["editor::MoveLineUp", "editor::ReformatSelection"]
+      "alt-k": ["editor::MoveLineUp", "editor::ReformatSelection"],
+
+      "space /": "editor::ToggleComments"
     }
   },
   {
