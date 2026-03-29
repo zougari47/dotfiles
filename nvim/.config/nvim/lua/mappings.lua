@@ -26,6 +26,7 @@ map("n", "<leader>bX", function()
   tabufline.closeAllBufs(false)
 end, { desc = "Close all buffers except current" })
 map("n", "<leader>bn", "<cmd>enew<CR>", { desc = "New buffer" })
+map("n", "<leader>br", "<cmd>checktime<CR>", { desc = "Refresh buffer" })
 
 map("n", "<Esc>j", ":m .+1<CR>==", { desc = "Move line down" })
 map("n", "<Esc>k", ":m .-2<CR>==", { desc = "Move line up" })

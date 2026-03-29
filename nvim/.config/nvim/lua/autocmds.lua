@@ -1,3 +1,5 @@
+vim.filetype.add { extension = { mdx = "markdown" } }
+
 require "nvchad.autocmds"
 
 vim.api.nvim_create_autocmd("BufDelete", {
