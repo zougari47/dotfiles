@@ -60,4 +60,9 @@ end, { desc = "LSP Show floating diagnostic" })
 
 map("n", "gl", vim.diagnostic.open_float, { desc = "Floating diagnostic" })
 
+-- Telescope
+map("n", "<leader>fw", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Find word in current buffer" })
+
+map("n", "<leader>fW", "<cmd>Telescope live_grep<CR>", { desc = "Find word in the entire project" })
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
