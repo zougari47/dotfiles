@@ -66,3 +66,5 @@ map("n", "<leader>fw", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = 
 map("n", "<leader>fW", "<cmd>Telescope live_grep<CR>", { desc = "Find word in the entire project" })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+map("n", "<leader>gd", "<cmd>DiffviewOpen --no-file-panel<cr>")
+map("n", "<leader>gq", "<cmd>DiffviewClose<cr>")
