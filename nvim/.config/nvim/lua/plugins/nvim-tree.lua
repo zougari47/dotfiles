@@ -3,6 +3,7 @@ return {
   opts = {
     view = {
       side = "right", -- set file explorer to the right
+      adaptive_size = true,
     },
     filters = {
       dotfiles = false,
