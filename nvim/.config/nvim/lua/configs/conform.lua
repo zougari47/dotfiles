@@ -1,25 +1,17 @@
-local prettierFts = {
-  "html",
-  "css",
-  "scss",
-  "javascript",
-  "typescript",
-  "javascriptreact",
-  "typescriptreact",
-  "jsx",
-  "tsx",
-  "json",
-  "jsonc",
-  "yaml",
+local oxfmtFts = {
+  "html", "css", "scss", "less",
+  "javascript", "javascriptreact",
+  "typescript", "typescriptreact",
+  "json", "jsonc",
+  "yaml", "toml",
   "graphql",
-  "markdown",
-  "mdx",
+  "markdown", "mdx",
+  "vue",
+}
+
+local prettierOnlyFts = {
   "astro",
-  "toml",
   "xml",
-  "gitignore",
-  "prettierignore",
-  "prettierrc",
 }
 
 local options = {
@@ -28,16 +20,17 @@ local options = {
     sh = { "shfmt" },
     bash = { "shfmt" },
   },
-
-  -- Optional: Enable format on save
   format_on_save = {
     timeout_ms = 2000,
     lsp_fallback = true,
   },
 }
 
--- Add prettierd to all prettier-supported file types
-for _, ft in pairs(prettierFts) do
+for _, ft in ipairs(oxfmtFts) do
+  options.formatters_by_ft[ft] = { "oxfmt" }
+end
+
+for _, ft in ipairs(prettierOnlyFts) do
   options.formatters_by_ft[ft] = { "prettierd", "prettier" }
 end
 
