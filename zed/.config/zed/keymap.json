@@ -1,5 +1,10 @@
 [
   {
+    "bindings": {
+      "ctrl-n": "workspace::ToggleRightDock"
+    }
+  },
+  {
     "context": "Workspace",
     "bindings": {
       "ctrl-n": "workspace::ToggleRightDock",

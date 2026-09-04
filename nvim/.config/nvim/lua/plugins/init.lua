@@ -42,4 +42,13 @@ return {
     event = "InsertCharPre",
     opts = {},
   },
+
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    ft = { "markdown", "Avante" },
+    opts = {
+      enabled = false,
+    },
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
+  },
 }

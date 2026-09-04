@@ -68,3 +68,6 @@ map("n", "<leader>fW", "<cmd>Telescope live_grep<CR>", { desc = "Find word in th
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 map("n", "<leader>gd", "<cmd>DiffviewOpen --no-file-panel<cr>")
 map("n", "<leader>gq", "<cmd>DiffviewClose<cr>")
+
+-- Render Markdown
+map("n", "<leader>rm", "<cmd>RenderMarkdown toggle<CR>", { desc = "Toggle Render Markdown" })
