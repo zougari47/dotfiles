@@ -1,0 +1,17 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "model": "opus",
+  "enabledPlugins": {
+    "mattpocock-skills@claude-plugins-official": true,
+    "expo@claude-plugins-official": true
+  },
+  "voice": {
+    "enabled": true,
+    "mode": "tap"
+  },
+  "theme": "dark",
+  "voiceEnabled": true
+}
