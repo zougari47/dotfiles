@@ -6,7 +6,8 @@
   "model": "opus",
   "enabledPlugins": {
     "mattpocock-skills@claude-plugins-official": true,
-    "expo@claude-plugins-official": true
+    "expo@claude-plugins-official": true,
+    "shopify-ai-toolkit@claude-plugins-official": true
   },
   "voice": {
     "enabled": true,
