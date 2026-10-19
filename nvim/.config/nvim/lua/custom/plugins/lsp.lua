@@ -1,5 +1,5 @@
 -- LSP: mason installs servers/tools, vim.lsp.config configures them.
--- LSP keymaps live in init.lua.
+-- LSP keymaps live in keymaps.lua.
 
 vim.pack.add {
   "https://github.com/j-hui/fidget.nvim",
@@ -118,6 +118,11 @@ local servers = {
 
   -- Markup / Docs
   marksman = {},
+
+  -- Config / data formats
+  jsonls = {},
+  taplo = {},
+  yamlls = {},
 
   -- Scripting / Languages
   bashls = {},

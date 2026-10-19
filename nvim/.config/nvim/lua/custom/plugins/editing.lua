@@ -4,6 +4,7 @@ vim.pack.add {
   "https://github.com/windwp/nvim-autopairs",
   "https://github.com/abecodes/tabout.nvim",
   "https://github.com/windwp/nvim-ts-autotag",
+  "https://github.com/nvim-lua/plenary.nvim", -- todo-comments search (:TodoQuickFix) needs it
   "https://github.com/folke/todo-comments.nvim",
   "https://github.com/MeanderingProgrammer/render-markdown.nvim",
 }

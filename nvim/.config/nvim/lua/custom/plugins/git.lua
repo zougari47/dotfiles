@@ -1,10 +1,7 @@
--- Git: signs in the gutter + diff view (keymaps in init.lua; lazygit lives in snacks.lua)
+-- Git: signs in the gutter (lazygit lives in snacks.lua)
+-- was: + diffview.nvim (<leader>gd / <leader>gq) | now: dropped
 
-vim.pack.add {
-  "https://github.com/lewis6991/gitsigns.nvim",
-  "https://github.com/nvim-lua/plenary.nvim",
-  "https://github.com/sindrets/diffview.nvim",
-}
+vim.pack.add { "https://github.com/lewis6991/gitsigns.nvim" }
 
 -- was: NvChad gitsigns config | now: same signs, no keymaps (NvChad had none either)
 require("gitsigns").setup {
@@ -50,9 +47,4 @@ require("gitsigns").setup {
   --   vim.keymap.set({ 'o', 'x' }, 'ih', gitsigns.select_hunk, { desc = 'text object [i]nside [h]unk', buf = bufnr })
   -- end,
   -- ===== end [kickstart] =====
-}
-
-require("diffview").setup {
-  enhanced_diff_hl = true,
-  use_icons = true,
 }

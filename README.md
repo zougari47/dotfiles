@@ -4,6 +4,10 @@
 > These are my personal config files, made for my own machine and habits.
 > Use them at your own risk.
 
+## nvim
+
+Neovim **v0.12.6**.
+
 ## tmux
 
 The prefix is <kbd>Ctrl</kbd> + <kbd>a</kbd>. "prefix, then <kbd>n</kbd>" means: press the prefix, let go, press <kbd>n</kbd>.

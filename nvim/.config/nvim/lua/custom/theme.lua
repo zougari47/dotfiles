@@ -1,6 +1,6 @@
 -- Remembers the last colorscheme you picked (e.g. with :lua Snacks.picker.colorschemes()
 -- or :colorscheme <name>) and loads it again on the next start.
--- Saved in ~/.local/state/nvim2/colorscheme. Delete that file to go back to the default theme.
+-- Saved in ~/.local/state/nvim/colorscheme. Delete that file to go back to the default theme.
 
 local file = vim.fn.stdpath "state" .. "/colorscheme"
 

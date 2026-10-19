@@ -190,8 +190,6 @@ map("n", "<leader>gt", function()
 end, { desc = "git status" })
 
 -- Git
-map("n", "<leader>gd", "<cmd>DiffviewOpen --no-file-panel<cr>", { desc = "Diffview open" })
-map("n", "<leader>gq", "<cmd>DiffviewClose<cr>", { desc = "Diffview close" })
 -- was: lazygit.nvim :LazyGit | now: Snacks lazygit
 map("n", "<leader>lg", function()
   Snacks.lazygit()

@@ -1,5 +1,5 @@
 # Layout overrides applied only when lazygit is opened from Neovim.
-# Layered on top of ~/.config/lazygit/config.yml by lua/plugins/lazygit.nvim.lua.
+# Layered on top of ~/.config/lazygit/config.yml by lua/custom/plugins/snacks.lua.
 gui:
   sidePanelWidth: 0.2
   expandFocusedSidePanel: true
