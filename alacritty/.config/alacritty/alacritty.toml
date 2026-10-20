@@ -1,0 +1,20 @@
+# Alacritty config, ported from wezterm/.wezterm.lua
+
+[font]
+normal = { family = "Hack Nerd Font Mono" }
+size = 14
+
+[window]
+decorations = "None"
+# Alacritty has one value for top and bottom, unlike WezTerm's 16/8
+padding = { x = 20, y = 16 }
+opacity = 0.7
+
+# Open URL in the browser with Ctrl + left click
+[[hints.enabled]]
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`\\\\]+"
+hyperlinks = true
+post_processing = true
+command = "xdg-open"
+mouse = { enabled = true, mods = "Control" }
+binding = { key = "O", mods = "Control|Shift" }

@@ -32,3 +32,12 @@ The prefix is <kbd>Ctrl</kbd> + <kbd>a</kbd>. "prefix, then <kbd>n</kbd>" means:
 | **Other** | |
 | prefix, then <kbd>r</kbd> | Reload the config |
 | <kbd>Shift</kbd> + click | Open a link (tmux takes plain clicks, so WezTerm needs Shift) |
+
+## alacritty
+
+Alacritty **v0.17.0**, built by `scripts/Scripts/install-alacritty.sh`. The config lives in `alacritty/.config/alacritty/alacritty.toml`; link it with `stow alacritty`.
+
+| Keys | What it does |
+| --- | --- |
+| <kbd>Ctrl</kbd> + click | Open a link (inside tmux, add <kbd>Shift</kbd>: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + click) |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> | Pick a link on screen with the keyboard |
