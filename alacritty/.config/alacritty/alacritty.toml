@@ -9,6 +9,9 @@ decorations = "None"
 # Alacritty has one value for top and bottom, unlike WezTerm's 16/8
 padding = { x = 20, y = 16 }
 opacity = 0.7
+startup_mode = "Maximized"   # or "Fullscreen" / "Windowed"
+# For a fixed size instead (in character cells, used when startup_mode = "Windowed"):
+# dimensions = { columns = 160, lines = 45 }
 
 # Open URL in the browser with Ctrl + left click
 [[hints.enabled]]
