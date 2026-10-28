@@ -23,7 +23,12 @@ vim.api.nvim_create_autocmd("BufDelete", {
         return b ~= args.buf and vim.api.nvim_buf_is_valid(b) and vim.bo[b].buflisted
       end, vim.api.nvim_list_bufs())
       if #bufs == 1 and vim.api.nvim_buf_get_name(bufs[1]) == "" and vim.bo[bufs[1]].filetype == "" then
-        Snacks.dashboard()
+        -- open it in the empty buffer's window, like at startup: a bare Snacks.dashboard() is a
+        -- full-screen float that hides the tabline/statusline, and the picker opens files inside it
+        local win = vim.fn.bufwinid(bufs[1])
+        if win ~= -1 then
+          Snacks.dashboard { buf = bufs[1], win = win }
+        end
       end
     end)
   end,
