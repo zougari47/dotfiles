@@ -24,6 +24,16 @@ require("snacks").setup {
   -- revert: add telescope.nvim and point the <leader>f* keys back to `:Telescope ...`
   picker = {
     enabled = true,
+    -- Snacks' <Tab> marks the item and <CR> then opens the marked ones; Telescope's <CR>
+    -- ignored the marks, so <Tab> felt like "move down". Make it just move, like before.
+    win = {
+      input = {
+        keys = {
+          ["<Tab>"] = { "list_down", mode = { "i", "n" } },
+          ["<S-Tab>"] = { "list_up", mode = { "i", "n" } },
+        },
+      },
+    },
     sources = {
       -- was: nvim-tree (side = "right", adaptive_size, dotfiles shown, quit_on_open)
       -- now: Snacks explorer, fixed width (no adaptive size)
