@@ -29,6 +29,9 @@ require("mini.ai").setup {
 --  - sr)'  - [S]urround [R]eplace [)] [']
 require("mini.surround").setup()
 
+-- was: nvim-autopairs | now: mini.pairs (closes brackets and quotes as you type)
+require("mini.pairs").setup()
+
 -- was: NvChad statusline | now: mini.statusline
 local statusline = require "mini.statusline"
 statusline.setup { use_icons = vim.g.have_nerd_font }

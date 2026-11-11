@@ -1,4 +1,4 @@
--- Git: signs in the gutter (lazygit lives in snacks.lua)
+-- Git: signs in the gutter (lazygit runs from the tmux popup, prefix g)
 -- was: + diffview.nvim (<leader>gd / <leader>gq) | now: dropped
 
 vim.pack.add { "https://github.com/lewis6991/gitsigns.nvim" }
@@ -11,7 +11,7 @@ require("gitsigns").setup {
   },
 
   -- ===== [kickstart] gitsigns keymaps (disabled) =====
-  -- <leader>h* would clash with my <leader>h (new horizontal terminal)
+  -- kept for reference, not enabled
   --
   -- on_attach = function(bufnr)
   --   local gitsigns = require 'gitsigns'

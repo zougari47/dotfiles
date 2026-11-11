@@ -1,23 +1,10 @@
--- snacks.nvim: one plugin covering picker, explorer, dashboard, terminal,
--- lazygit, buffer delete, indent guides and the floating input box.
+-- snacks.nvim: one plugin covering picker, explorer, dashboard,
+-- buffer delete, indent guides and the floating input box.
 --
 -- revert: each feature below lists the plugin it replaced. To go back, add that
 -- plugin in its own file and point the keymaps in init.lua back at it.
 
 vim.pack.add { "https://github.com/folke/snacks.nvim" }
-
--- was: lazygit.nvim layered lazygit.yml (Neovim-only layout tweaks) on top of your lazygit config
--- now: same layering through LG_CONFIG_FILE; Snacks appends its theme file after these
-local lazygit_files = {
-  vim.fn.expand "~/.config/lazygit/config.yml",
-  vim.fn.stdpath "config" .. "/lazygit.yml",
-}
-vim.env.LG_CONFIG_FILE = table.concat(
-  vim.tbl_filter(function(f)
-    return vim.uv.fs_stat(f) ~= nil
-  end, lazygit_files),
-  ","
-)
 
 require("snacks").setup {
   -- was: Telescope (NvChad) | now: Snacks picker
@@ -68,14 +55,4 @@ require("snacks").setup {
 
   -- was: Snacks input (already used for the rename popup) | now: same
   input = { enabled = true },
-
-  -- was: nvchad.term | now: Snacks terminal (keys in init.lua)
-  terminal = { enabled = true },
-
-  -- was: lazygit.nvim (vim.g.lazygit_floating_window_scaling_factor = 1)
-  -- now: Snacks lazygit, full size, coloured to match the theme, `e` edits in this nvim
-  lazygit = {
-    enabled = true,
-    win = { width = 0, height = 0 },
-  },
 }

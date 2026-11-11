@@ -3,7 +3,7 @@
 -- Markers used throughout this config:
 --   [kickstart]  code kept from kickstart
 --   [mine]       my own settings and keymaps (these win over kickstart)
---   was: ... | now: ...   what this replaced from the old NvChad config (dotfiles/archive/nvim)
+--   was: ... | now: ...   what this replaced from the old NvChad config (see git history: archive/nvim)
 --
 -- Plugins are managed by the built-in vim.pack:
 --   :lua vim.pack.update()   update plugins

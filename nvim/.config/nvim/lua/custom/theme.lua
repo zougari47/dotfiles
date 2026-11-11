@@ -5,7 +5,7 @@
 local file = vim.fn.stdpath "state" .. "/colorscheme"
 
 -- Transparent background on every colorscheme, so Alacritty's opacity shows through
--- (floats cover the Snacks picker, explorer and lazygit)
+-- (floats cover the Snacks picker and explorer)
 vim.api.nvim_create_autocmd("ColorScheme", {
   callback = function()
     for _, group in ipairs { "Normal", "NormalNC", "NormalFloat", "FloatBorder", "SignColumn", "EndOfBuffer" } do

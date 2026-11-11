@@ -189,48 +189,6 @@ map("n", "<leader>gt", function()
   Snacks.picker.git_status()
 end, { desc = "git status" })
 
--- Git
--- was: lazygit.nvim :LazyGit | now: Snacks lazygit
-map("n", "<leader>lg", function()
-  Snacks.lazygit()
-end, { desc = "LazyGit" })
-
--- Terminal (was: nvchad.term | now: Snacks terminal)
-map("t", "<C-x>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
-
--- new terminals
-map("n", "<leader>h", function()
-  Snacks.terminal.open(nil, { win = { position = "bottom" } })
-end, { desc = "terminal new horizontal term" })
-map("n", "<leader>v", function()
-  Snacks.terminal.open(nil, { win = { position = "right" } })
-end, { desc = "terminal new vertical term" })
-
--- toggleable (each one keeps its own terminal, like the old ids vtoggleTerm/htoggleTerm/floatTerm)
-map({ "n", "t" }, "<A-v>", function()
-  Snacks.terminal.toggle(nil, { count = 101, win = { position = "right" } })
-end, { desc = "terminal toggleable vertical term" })
-map({ "n", "t" }, "<A-h>", function()
-  Snacks.terminal.toggle(nil, { count = 102, win = { position = "bottom" } })
-end, { desc = "terminal toggleable horizontal term" })
-map({ "n", "t" }, "<A-i>", function()
-  Snacks.terminal.toggle(nil, { count = 103, win = { position = "float" } })
-end, { desc = "terminal toggle floating term" })
-
--- was: Telescope terms | now: pick from Snacks terminals
-map("n", "<leader>pt", function()
-  vim.ui.select(Snacks.terminal.list(), {
-    prompt = "Terminals",
-    format_item = function(term)
-      return vim.api.nvim_buf_get_name(term.buf)
-    end,
-  }, function(term)
-    if term then
-      term:show():focus()
-    end
-  end)
-end, { desc = "pick hidden term" })
-
 -- WhichKey
 -- was: <leader>wK / <leader>wk | now: <leader>WK / <leader>Wk (<leader>w is save)
 map("n", "<leader>WK", "<cmd>WhichKey <CR>", { desc = "whichkey all keymaps" })

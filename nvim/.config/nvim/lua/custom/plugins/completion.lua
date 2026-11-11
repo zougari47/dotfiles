@@ -1,13 +1,9 @@
--- Completion + snippets
+-- Completion + snippets (blink.cmp reads the friendly-snippets collection by itself)
 
 vim.pack.add {
-  { src = "https://github.com/L3MON4D3/LuaSnip", version = vim.version.range "2.*" },
   "https://github.com/rafamadriz/friendly-snippets",
   { src = "https://github.com/saghen/blink.cmp", version = vim.version.range "1.*" },
 }
-
-require("luasnip").setup {}
-require("luasnip.loaders.from_vscode").lazy_load()
 
 -- was: nvim-cmp (NvChad). Your blink.cmp spec never loaded, so these are the keys you actually used.
 -- now: blink.cmp with the same keys
@@ -37,8 +33,6 @@ require("blink.cmp").setup {
   completion = {
     documentation = { auto_show = false, auto_show_delay_ms = 500 },
   },
-
-  snippets = { preset = "luasnip" },
 
   fuzzy = { implementation = "lua" },
 
