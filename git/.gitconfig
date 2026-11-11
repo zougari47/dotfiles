@@ -5,6 +5,12 @@
 	defaultBranch = main
 [core]
 	editor = vim
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true       # n / N jump between files
+	line-numbers = true
 [push]
 	autoSetupRemote = true
 [fetch]

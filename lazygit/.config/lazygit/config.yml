@@ -1,0 +1,6 @@
+git:
+  # Show diffs through delta. Its look is set in the [delta] section of ~/.gitconfig.
+  # --paging=never is required: lazygit does the scrolling itself.
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
