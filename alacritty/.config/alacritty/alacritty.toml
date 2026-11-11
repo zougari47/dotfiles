@@ -1,7 +1,7 @@
 # Alacritty config, ported from wezterm/.wezterm.lua
 
 [font]
-normal = { family = "Hack Nerd Font Mono" }
+normal = { family = "Hack Nerd Font" }
 size = 14
 
 [window]
