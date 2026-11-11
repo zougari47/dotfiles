@@ -30,6 +30,7 @@ The prefix is <kbd>Ctrl</kbd> + <kbd>a</kbd>. "prefix, then <kbd>n</kbd>" means:
 | prefix, then <kbd>"</kbd> | Split top and bottom, in the current folder |
 | prefix, then <kbd>h</kbd> <kbd>j</kbd> <kbd>k</kbd> <kbd>l</kbd> | Move to the pane on the left, below, above, on the right |
 | **Other** | |
+| prefix, then <kbd>g</kbd> | lazygit in a full-screen popup, in the current folder; <kbd>q</kbd> closes it |
 | prefix, then <kbd>r</kbd> | Reload the config |
 | <kbd>Shift</kbd> + click | Open a link (tmux takes plain clicks, so WezTerm needs Shift) |
 

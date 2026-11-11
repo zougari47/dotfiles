@@ -1,0 +1,9 @@
+# Layout overrides applied only when lazygit is opened in the tmux popup (prefix g).
+# Layered on top of config.yml by the binding in ~/.tmux.conf.
+# The popup is for reviewing changes: a narrow file tree and a wide diff.
+gui:
+  sidePanelWidth: 0.2            # share of the screen for the left column
+  expandFocusedSidePanel: true   # the focused panel takes the column...
+  expandedSidePanelWeight: 1000  # ...and the others shrink to thin strips
+  showCommandLog: false
+  showPanelJumps: false          # no [1] [2] numbers on the panel titles
