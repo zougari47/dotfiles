@@ -1,18 +1,66 @@
 {
+  "syncClaudeAiSkills": false,
+  "syncClaudeAiPlugins": false,
   "attribution": {
     "commit": "",
     "pr": ""
   },
-  "model": "opus",
-  "enabledPlugins": {
-    "mattpocock-skills@claude-plugins-official": true,
-    "expo@claude-plugins-official": true,
-    "shopify-ai-toolkit@claude-plugins-official": true
+  "model": "fable",
+  "disableClaudeAiConnectors": true,
+  "skillOverrides": {
+    "diagnosing-bugs": "user-invocable-only",
+    "git-guardrails-claude-code": "user-invocable-only",
+    "migrate-to-shoehorn": "user-invocable-only",
+    "pr": "user-invocable-only",
+    "scaffold-exercises": "user-invocable-only",
+    "setup-pre-commit": "user-invocable-only",
+    "wizard": "user-invocable-only",
+    "dataviz": "user-invocable-only",
+    "update-config": "user-invocable-only",
+    "keybindings-help": "user-invocable-only",
+    "simplify": "user-invocable-only",
+    "fewer-permission-prompts": "user-invocable-only",
+    "loop": "user-invocable-only",
+    "schedule": "user-invocable-only",
+    "workflow-authoring": "user-invocable-only",
+    "claude-in-chrome": "user-invocable-only",
+    "run": "user-invocable-only",
+    "plugin-authoring": "user-invocable-only",
+    "init": "user-invocable-only",
+    "security-review": "user-invocable-only"
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '(.cwd // \"\" | split(\"/\") | last), (.message // \"Needs your attention\")' | { read -r dir; read -r msg; notify-send -a 'Claude Code' \"Claude Code · $dir\" \"$msg\"; paplay /usr/share/sounds/Oxygen-Sys-App-Message.ogg >/dev/null 2>&1 & }"
+          }
+        ]
+      }
+    ]
+  },
+  "enableArtifact": false,
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline.sh",
+    "refreshInterval": 60
+  },
+  "enabledPlugins": {},
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "medium"
+    },
+    "claude-fable-5-1": {
+      "effortLevel": "xhigh"
+    }
   },
   "voice": {
     "enabled": true,
     "mode": "tap"
   },
   "theme": "dark",
+  "preferredNotifChannel": "notifications_disabled",
   "voiceEnabled": true
 }
